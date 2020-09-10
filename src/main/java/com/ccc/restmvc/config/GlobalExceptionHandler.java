@@ -33,7 +33,7 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<List<ParamValidMsg>> checkRequest(MethodArgumentNotValidException e) {
 
 		BindingResult bindingResult = e.getBindingResult();
-
+		
 		return ResponseEntity.error(
 				bindingResult
 					.getFieldErrors()
